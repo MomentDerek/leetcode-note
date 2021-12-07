@@ -52,17 +52,18 @@ package leetcode.editor.cn;
 public class FibonacciNumber509 {
     public static void main(String[] args) {
         Solution solution = new FibonacciNumber509().new Solution();
+        long startTime = System.currentTimeMillis();
+        int result = solution.fib(30);
+        long endTime = System.currentTimeMillis();
+        double time = endTime - startTime;
+        System.out.println(result);
+        System.out.println("程序运行时间： " + ((time > 10000) ? time / 1000 + "s" : time + "ms"));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
+    //dp迭代解法
     class Solution {
-        //int[] note;
         public int fib(int n) {
-            //带备忘录的递归解法
-            //note = new int[n+1];
-            //return dp(n);
-
-            //dp迭代解法
             if (n == 0) return 0;
             if (n == 1 || n == 2) return 1;
             int first = 0;
@@ -75,14 +76,24 @@ public class FibonacciNumber509 {
             }
             return result;
         }
+    }
 
-        //private int dp(int n) {
-        //    if (n == 0) return 0;
-        //    if (n == 1 || n == 2) return 1;
-        //    if (note[n]!=0) return note[n];
-        //    note[n] = dp(n-1) + dp(n-2);
-        //    return note[n];
-        //}
+    //带备忘录的递归解法
+    class Solution2 {
+        int[] note;
+
+        public int fib(int n) {
+            note = new int[n + 1];
+            return dp(n);
+        }
+
+        private int dp(int n) {
+            if (n == 0) return 0;
+            if (n == 1 || n == 2) return 1;
+            if (note[n] != 0) return note[n];
+            note[n] = dp(n - 1) + dp(n - 2);
+            return note[n];
+        }
     }
     //leetcode submit region end(Prohibit modification and deletion)
 

@@ -38,7 +38,8 @@
 
 package leetcode.editor.cn;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 // 46 全排列 （回溯算法）
 public class Permutations46 {
@@ -73,7 +74,7 @@ public class Permutations46 {
             return res;
         }
 
-        private void trackBack( int depth,
+        private void trackBack(int depth,
                                List<Integer> path) {
             //满足结束条件
             if (depth == nums.length) {
@@ -81,7 +82,7 @@ public class Permutations46 {
                 res.add(new ArrayList<>(path));
                 return;
             }
-            //遍历子节点列表
+
             for (int i = 0; i < nums.length; i++) {
                 //排除不符合规则的子节点
                 if (!used[i]) {
@@ -91,11 +92,12 @@ public class Permutations46 {
                     trackBack(depth + 1, path);
                     //撤销选择
                     used[i] = false;
-                    path.remove(path.size()-1);
+                    path.remove(path.size() - 1);
                 }
             }
         }
     }
+
     //原始版本（取消了LinkedList，因为LinkedList在加入res数组耗费的时间非常多）
     class Solution2 {
         //结果
@@ -126,7 +128,7 @@ public class Permutations46 {
                 track.add(num);
                 trackBack(track);
                 //撤销选择
-                track.remove(track.size()-1);
+                track.remove(track.size() - 1);
             }
         }
     }
