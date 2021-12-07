@@ -57,7 +57,7 @@ package leetcode.editor.cn;
 
 import java.util.Arrays;
 
-// 322 零钱兑换
+// 322 零钱兑换（动态规划）
 public class CoinChange322 {
     public static void main(String[] args) {
         Solution solution = new CoinChange322().new Solution();
