@@ -61,35 +61,78 @@ import java.util.Arrays;
 public class CoinChange322 {
     public static void main(String[] args) {
         Solution solution = new CoinChange322().new Solution();
-        int[] coins = {1, 2, 5};
-        System.out.println(solution.coinChange(coins, 100));
+        int[] coins = {186, 419, 83, 408};
+        long startTime = System.currentTimeMillis();
+        System.out.println(solution.coinChange(coins, 6249));
+        long endTime = System.currentTimeMillis();
+        System.out.println("程序运行时间： " + (endTime - startTime)  + "ms");
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
+    //dp迭代
     class Solution {
+
+        public int coinChange(int[] coins, int amount) {
+            //“dp表”
+            int[] dpTable = new int[amount + 1];
+            Arrays.fill(dpTable, amount + 1);
+            dpTable[0] = 0;
+            for (int i = 0; i < dpTable.length; i++) {
+                for (int coin : coins) {
+                    if (i - coin < 0) continue;
+                    dpTable[i] = Math.min(dpTable[i], 1 + dpTable[i - coin]);
+                }
+            }
+            int res = dpTable[amount];
+            return res == amount+1 ? -1 : res;
+        }
+
+    }
+
+    //带备忘录的递归，超时
+    /*
+     * coins = {186, 419, 83, 408}
+     * 6249
+     * 运行时间49s
+     */
+    class Solution2 {
+        //“选择”
         private int[] coins;
+        //“备忘录”
         private int[] note;
+        //测试用计数
+        private long num;
 
         public int coinChange(int[] coins, int amount) {
             this.coins = coins;
+            //初始化备忘录
             note = new int[amount + 1];
-            Arrays.fill(note,-1);
+            Arrays.fill(note, -1);
+            //开始迭代
             return dp(amount);
         }
 
         private int dp(int amount) {
-            //if (note[amount] != -1) return note[amount];
-            if (amount<0) return -1;
-            if (amount==0) return 0;
-            int result = Integer.MAX_VALUE;
+            System.out.println(num++);
+            if (amount < 0) return -1;
+            if (amount == 0) return 0;
+            //查备忘录需要在base判断后，否则可能会超索引（此处可能会-1）
+            if (note[amount] != -1) return note[amount];
+            //当前金额的结果
+            int tempRes = Integer.MAX_VALUE;
             for (int coin : coins) {
+                //往下递归
                 int subRes = dp(amount - coin);
+                //如果递归返回的是-1，则说明此路线无解，换下一个
                 if (subRes == -1) continue;
-                result = Integer.min(result, subRes+1);
+                tempRes = Integer.min(tempRes, subRes + 1);
             }
-            return result==Integer.MAX_VALUE?-1:result;
+            int amountRes = tempRes == Integer.MAX_VALUE ? -1 : tempRes;
+            note[amount] = amountRes;
+            return amountRes;
         }
     }
     //leetcode submit region end(Prohibit modification and deletion)
+
 
 }
