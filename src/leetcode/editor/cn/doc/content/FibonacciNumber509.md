@@ -1,5 +1,4 @@
-/**
-/**
+
 <p><strong>斐波那契数</strong>，通常用 <code>F(n)</code> 表示，形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
 
 <pre>
@@ -43,5 +42,3 @@ F(n) = F(n - 1) + F(n - 2)，其中 n > 1
 	<li><code>0 <= n <= 30</code></li>
 </ul>
 <div><div>Related Topics</div><div><li>递归</li><li>记忆化搜索</li><li>数学</li><li>动态规划</li></div></div><br><div><li>👍 349</li><li>👎 0</li></div>
-*/
-*/
