@@ -68,30 +68,42 @@ public class NQueens51 {
             board = generateBoard(n);
             res = new ArrayList<>();
             size = n;
+            //开始递归
             backTrack(0);
             return res;
         }
 
         private void backTrack(int row) {
+            //满足结束条件
             if (row == size) {
+                //提交路径（结果）
                 addResult();
                 return;
             }
+            //遍历子节点列表
+            //当前在第row行，从第0列到n-1列进行循环
             for (int col = 0; col < size; col++) {
+                //排除不符合规则的子节点
                 if (!isValid(board, row, col)) continue;
                 board[row][col] = 'Q';
+                //遍历下一行
                 backTrack(row + 1);
+                //撤销选择
                 board[row][col] = '.';
             }
         }
 
+        //判断所选格子的合法性
         private boolean isValid(char[][] board, int row, int col) {
-            for (int i = 0; i < size; i++)
-                if (board[i][col] == 'Q') return false;
-            for (int i = row - 1, j = col + 1; i >= 0 && j < size; i--, j++)
-                if (board[i][j] == 'Q') return false;
-            for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
-                if (board[i][j] == 'Q') return false;
+            //从当前列的第一个格子[0][col]向当前格子[row][col]遍历
+            for (int rowNow = 0; rowNow < row; rowNow++)
+                if (board[rowNow][col] == 'Q') return false;
+            //从格子的右上角格子[row-1][col+1]向棋盘的右上角[0][size]遍历
+            for (int rowNow = row - 1, colNow = col + 1; rowNow >= 0 && colNow < size; rowNow--, colNow++)
+                if (board[rowNow][colNow] == 'Q') return false;
+            //从格子的左上角格子[row-1][col-1]向棋盘的左上角[0][0]遍历
+            for (int rowNow = row - 1, colNow = col - 1; rowNow >= 0 && colNow >= 0; rowNow--, colNow--)
+                if (board[rowNow][colNow] == 'Q') return false;
             return true;
         }
 
@@ -161,6 +173,7 @@ public class NQueens51 {
             if (row == size) {
                 //提交路径（结果）
                 addResult();
+                return;
             }
             //遍历子节点列表
             //当前在第row行，从第0列到n-1列进行循环
