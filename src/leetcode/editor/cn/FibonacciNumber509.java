@@ -48,7 +48,7 @@
 
 package leetcode.editor.cn;
 
-// 509 斐波那契数
+// 509 斐波那契数（动态规划）
 public class FibonacciNumber509 {
     public static void main(String[] args) {
         Solution solution = new FibonacciNumber509().new Solution();
