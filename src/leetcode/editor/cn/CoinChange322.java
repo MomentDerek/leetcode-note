@@ -65,7 +65,8 @@ public class CoinChange322 {
         long startTime = System.currentTimeMillis();
         System.out.println(solution.coinChange(coins, 6249));
         long endTime = System.currentTimeMillis();
-        System.out.println("程序运行时间： " + (endTime - startTime)  + "ms");
+        double time = endTime - startTime;
+        System.out.println("程序运行时间： " + ((time > 10000) ? time / 1000 + "s" : time + "ms"));
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
@@ -75,55 +76,49 @@ public class CoinChange322 {
         public int coinChange(int[] coins, int amount) {
             //“dp表”
             int[] dpTable = new int[amount + 1];
+            //填充数据为面值+1，因为最多的硬币数<=面值
             Arrays.fill(dpTable, amount + 1);
             dpTable[0] = 0;
             for (int i = 0; i < dpTable.length; i++) {
                 for (int coin : coins) {
+                    //硬币面值大于钱的总数
                     if (i - coin < 0) continue;
+                    //当前的结果（可能是面值+1）与去掉当前硬币的结果+1进行对比
                     dpTable[i] = Math.min(dpTable[i], 1 + dpTable[i - coin]);
                 }
             }
             int res = dpTable[amount];
-            return res == amount+1 ? -1 : res;
+            return res == amount + 1 ? -1 : res;
         }
 
     }
 
-    //带备忘录的递归，超时
-    /*
-     * coins = {186, 419, 83, 408}
-     * 6249
-     * 运行时间49s
-     */
+    //带备忘录的递归
     class Solution2 {
         //“选择”
         private int[] coins;
         //“备忘录”
         private int[] note;
-        //测试用计数
-        private long num;
 
         public int coinChange(int[] coins, int amount) {
             this.coins = coins;
             //初始化备忘录
             note = new int[amount + 1];
-            Arrays.fill(note, -1);
             //开始迭代
             return dp(amount);
         }
 
         private int dp(int amount) {
-            System.out.println(num++);
             if (amount < 0) return -1;
             if (amount == 0) return 0;
             //查备忘录需要在base判断后，否则可能会超索引（此处可能会-1）
-            if (note[amount] != -1) return note[amount];
+            if (note[amount] != 0) return note[amount];
             //当前金额的结果
             int tempRes = Integer.MAX_VALUE;
             for (int coin : coins) {
-                //往下递归
+                //往下递归，取到去掉当前硬币的结果
                 int subRes = dp(amount - coin);
-                //如果递归返回的是-1，则说明此路线无解，换下一个
+                //如果递归返回的是-1，则说明此路线无解（去掉当前硬币后无解），换下一个
                 if (subRes == -1) continue;
                 tempRes = Integer.min(tempRes, subRes + 1);
             }
