@@ -89,6 +89,14 @@ public class LinkedListCycleIi142 {
                 }
             }
             if (!circleFlag) return null;
+            //这里是找环的起始点，在判断完环是否存在后，有这么个关系：
+            //环的起始点result，链表头head，当前位置now
+            //从head到result的距离为a
+            //从result到now的距离为b
+            //因为fast是绕了一圈追上slow的，slow走了a+b，fast走了2a+2b，由此将两者作差，可知一圈环为a+b
+            //再回顾一下now，是result走距离b得到的，再走距离a即可完成一圈环，回到result
+            //同时，从head再走距离a也可得到result
+            //所以用两个指针，从now和head以相同的速度同时出发，碰头的地点自然就是result
             slow = head;
             while (slow != fast) {
                 slow = slow.next;
