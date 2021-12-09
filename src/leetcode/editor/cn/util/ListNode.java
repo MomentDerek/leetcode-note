@@ -5,8 +5,8 @@ package leetcode.editor.cn.util;
  * @author Moment
  */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
     ListNode(int x) { val = x; }
     ListNode(int x, int next) { val = x; this.next = new ListNode(next); }
 
