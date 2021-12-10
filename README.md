@@ -4,6 +4,8 @@
 
 ## 目录
 
+### 1. 核心套路篇
+
 #### 1.2 动态规划解题套路框架
 
 1.2.1 斐波那契数列 -> 斐波那契数FibonacciNumber509
@@ -39,3 +41,5 @@
 1.7.3 找所有字母异位词 -> 找到字符串中所有字母异位词FindAllAnagramsInAString438
 
 1.7.4 最长无重复子串 -> 无重复字符的最长子串LongestSubstringWithoutRepeatingCharacters3
+
+### 2. 动态规划系列
