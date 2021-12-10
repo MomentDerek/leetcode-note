@@ -67,7 +67,8 @@ public class PermutationInString567 {
                 System.out.println(valid);
                 //只要长度大于等于（其实就是等于）target就立马收缩
                 //如果right加入了一个数，会立马顶掉left的数，保证长度一直与target一致
-                while (right - left == target.length()) {
+                //此处其实可以换成if(right - left == target.length())，可能更好理解
+                while (right - left >= target.length()) {
                     //当window满足了就立刻返回
                     if (valid == need.size()) {
                         return true;
