@@ -34,3 +34,4 @@
 
 1.7.1 最小覆盖子串 ->  最小覆盖子串MinimumWindowSubstring76
 
+1.7.2 字符串排列 -> 字符串的排列PermutationInString567
