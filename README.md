@@ -37,3 +37,5 @@
 1.7.2 字符串排列 -> 字符串的排列PermutationInString567
 
 1.7.3 找所有字母异位词 -> 找到字符串中所有字母异位词FindAllAnagramsInAString438
+
+1.7.4 最长无重复子串 -> 无重复字符的最长子串LongestSubstringWithoutRepeatingCharacters3
