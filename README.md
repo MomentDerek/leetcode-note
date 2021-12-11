@@ -56,7 +56,7 @@
 
 2.5 最长公共子序列 -> 最长公共子序列LongestCommonSubsequence1143
 
-2.6 编辑距离
+2.6 编辑距离 -> 编辑距离EditDistance72
 
 2.7 最长回文子序列
 
