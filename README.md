@@ -43,3 +43,7 @@
 1.7.4 最长无重复子串 -> 无重复字符的最长子串LongestSubstringWithoutRepeatingCharacters3
 
 ### 2. 动态规划系列
+
+2.1 最长递增子序列 -> 最长递增子序列LongestIncreasingSubsequence300
+
+> ##### 注意2.1有二分法贪心算法，暂未学习，跳过
