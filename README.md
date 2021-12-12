@@ -58,7 +58,7 @@
 
 2.6 编辑距离 -> 编辑距离EditDistance72
 
-2.7 最长回文子序列
+2.7 最长回文子序列 -> 最长回文子序列LongestPalindromicSubsequence516
 
 2.9 以最小插入次数构造回文串
 
