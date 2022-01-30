@@ -35,6 +35,7 @@
 package leetcode.editor.cn;
 
 import leetcode.editor.cn.util.TreeNode;
+import leetcode.editor.cn.util.TreeUtils;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -43,7 +44,7 @@ import java.util.Queue;
 public class MinimumDepthOfBinaryTree111 {
     public static void main(String[] args) {
         Solution solution = new MinimumDepthOfBinaryTree111().new Solution();
-        TreeNode input = TreeNode.mkTree("[3,9,20,null,null,15,7]");
+        TreeNode input = TreeUtils.mkTree("[3,9,20,null,null,15,7]");
         long startTime = System.currentTimeMillis();
         int res = solution.minDepth(input);
         long endTime = System.currentTimeMillis();

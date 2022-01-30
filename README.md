@@ -91,3 +91,12 @@
 3.1 手把手教你写LRU缓存淘汰算法 -> LRU 缓存LruCache146
 
 3.2 层层拆解，帮你手写LFU算法 -> LFU 缓存LfuCache460
+
+3.3.1 判断BST的合法性 -> 验证二叉搜索树ValidateBinarySearchTree98
+
+3.3.2 在BST中查找一个数是否存在 -> 二叉搜索树中的搜索SearchInABinarySearchTree700
+
+3.3.3 在BST中插入一个数 -> 二叉搜索树中的插入操作InsertIntoABinarySearchTree701
+
+3.3.4 在BST中删除一个数 -> 删除二叉搜索树中的节点DeleteNodeInABst450
+
