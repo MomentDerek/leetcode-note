@@ -103,3 +103,5 @@
 3.4 完全二叉树的节点数为什么那么难算 -> 完全二叉树的节点个数CountCompleteTreeNodes222
 
 3.5 用各种遍历序列化和反序列化二叉树 -> 二叉树的序列化与反序列化SerializeAndDeserializeBinaryTree297
+
+3.6 Git原理之二叉树最近公共祖先 -> 二叉树的最近公共祖先LowestCommonAncestorOfABinaryTree236
