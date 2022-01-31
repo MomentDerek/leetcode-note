@@ -101,3 +101,5 @@
 3.3.4 在BST中删除一个数 -> 删除二叉搜索树中的节点DeleteNodeInABst450
 
 3.4 完全二叉树的节点数为什么那么难算 -> 完全二叉树的节点个数CountCompleteTreeNodes222
+
+3.5 用各种遍历序列化和反序列化二叉树 -> 二叉树的序列化与反序列化SerializeAndDeserializeBinaryTree297
