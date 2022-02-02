@@ -7,7 +7,7 @@ import java.util.LinkedList;
 public class TreeUtils {
     //测试代码：String str = "[3,9,20,null,null,15,7]";
     //输出：int []arr = {3, 9, 20, Integer.MAX_VALUE, Integer.MAX_VALUE, 15, 7};
-    private static int[] StrToIntArray(String str) {
+    public static int[] StrToIntArray(String str) {
         str = str.substring(1, str.length() - 1);
         String[] valueChars = str.split(",");
         int[] arr = new int[valueChars.length];
@@ -27,7 +27,7 @@ public class TreeUtils {
 
     //测试代码：String str = "[3,9,20,null,null,15,7]";
     //输出：int []arr = {3, 9, 20, Integer.MAX_VALUE, Integer.MAX_VALUE, 15, 7};
-    private static Integer[] StrToIntegerArray(String str) {
+    public static Integer[] StrToIntegerArray(String str) {
         str = str.substring(1, str.length() - 1);
         String[] valueChars = str.split(",");
         Integer[] arr = new Integer[valueChars.length];
