@@ -105,3 +105,9 @@
 3.5 用各种遍历序列化和反序列化二叉树 -> 二叉树的序列化与反序列化SerializeAndDeserializeBinaryTree297
 
 3.6 Git原理之二叉树最近公共祖先 -> 二叉树的最近公共祖先LowestCommonAncestorOfABinaryTree236
+
+3.7.1 特殊数据结构：单调栈 单调栈解题模板 -> 下一个更大元素 I NextGreaterElementI496 
+
+3.7.2 特殊数据结构：单调栈 题目变形 -> 每日温度DailyTemperatures739
+
+3.7.3 特殊数据结构：单调栈 如何处理循环数组 -> 下一个更大元素 II NextGreaterElementIi503
