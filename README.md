@@ -111,3 +111,5 @@
 3.7.2 特殊数据结构：单调栈 题目变形 -> 每日温度DailyTemperatures739
 
 3.7.3 特殊数据结构：单调栈 如何处理循环数组 -> 下一个更大元素 II NextGreaterElementIi503
+
+3.8 特殊数据结构：单调队列 -> 滑动窗口最大值SlidingWindowMaximum239
