@@ -115,3 +115,7 @@
 3.8 特殊数据结构：单调队列 -> 滑动窗口最大值SlidingWindowMaximum239
 
 3.9 如何判断回文链表 -> 回文链表PalindromeLinkedList234
+
+3.10.1 秀操作之纯递归反转链表：递归反转链表 -> 反转链表ReverseLinkedList206
+
+3.10.3 秀操作之纯递归反转链表：反转一部分链表 -> 反转链表 II ReverseLinkedListIi92
