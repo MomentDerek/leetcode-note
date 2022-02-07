@@ -8,7 +8,7 @@ public class ListNode {
     public int val;
     public ListNode next;
     public ListNode(int x) { val = x; }
-    ListNode(int x, int next) { val = x; this.next = new ListNode(next); }
+    public ListNode(int x, int next) { val = x; this.next = new ListNode(next); }
 
     /**
      * 链表节点的构造函数
