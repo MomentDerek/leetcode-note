@@ -119,3 +119,5 @@
 3.10.1 秀操作之纯递归反转链表：递归反转链表 -> 反转链表ReverseLinkedList206
 
 3.10.3 秀操作之纯递归反转链表：反转一部分链表 -> 反转链表 II ReverseLinkedListIi92
+
+3.11 秀操作之k个一组反转链表 -> K 个一组翻转链表ReverseNodesInKGroup25
