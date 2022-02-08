@@ -121,3 +121,11 @@
 3.10.3 秀操作之纯递归反转链表：反转一部分链表 -> 反转链表 II ReverseLinkedListIi92
 
 3.11 秀操作之k个一组反转链表 -> K 个一组翻转链表ReverseNodesInKGroup25
+
+### 4. 算法思维系列
+
+4.1.1 子集 -> 子集Subsets78
+
+4.1.2 组合 -> 组合Combinations77
+
+4.1.3 排列 -> 全排列Permutations46(同1.3.1 全排列问题)
