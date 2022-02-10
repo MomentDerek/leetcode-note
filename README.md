@@ -131,3 +131,5 @@
 4.1.3 排列 -> 全排列Permutations46(同1.3.1 全排列问题)
 
 4.2 解数独 -> 解数独SudokuSolver37
+
+4.3 括号生成 -> 括号生成GenerateParentheses22
