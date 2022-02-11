@@ -136,7 +136,7 @@
 
 4.4 BFS算法暴力破解各种智力题 -> 滑动谜题SlidingPuzzle773
 
-4.5 2Sum问题的核心思想 -> 两数之和TwoSum1
+4.5 2 Sum问题的核心思想 -> 两数之和TwoSum1
 
-
+4.6.2 3Sum问题 -> 三数之和ThreeSum15 
 
