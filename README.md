@@ -133,3 +133,5 @@
 4.2 解数独 -> 解数独SudokuSolver37
 
 4.3 括号生成 -> 括号生成GenerateParentheses22
+
+4.4 BFS算法暴力破解各种智力题 -> 滑动谜题SlidingPuzzle773
